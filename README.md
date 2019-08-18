@@ -5,7 +5,13 @@
 [![codecov](https://codecov.io/gh/terraless-modules/terraless-extension-extend-switch-roles/branch/master/graph/badge.svg)](https://codecov.io/gh/terraless-modules/terraless-extension-extend-switch-roles)
 
 This module outputs the configuration for the AWS Extend Switch Roles plugin. This makes it easy to switch between the different
-accounts in the AWS.
+accounts in the AWS. You only have to specify the profiles once.
+
+You can simply generate it like this:
+
+        terraless extension --name aws-extend-switch-roles
+
+Afterwords copy the configuration from the output into the browser plugin.
 
 ## Links
 
