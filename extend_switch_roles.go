@@ -10,7 +10,7 @@ import (
 const (
 	extendSwitchRolesBaseAccountTemplate = `
 [{{.Name}}]
-aws_account_id = {{.Data.accountId}}
+aws_account_id = {{.Data.baseAccountId}}
 
 `
 )
