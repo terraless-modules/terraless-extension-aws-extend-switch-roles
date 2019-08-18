@@ -6,23 +6,14 @@ import (
 	"github.com/hashicorp/go-hclog"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
-	"io"
 	"log"
 	"os"
 	"strings"
-	"sync"
 	"testing"
 )
 
 type TestLogger struct {
 	logs map[string][]string
-
-	// Just to be compliant
-	mu     sync.Mutex // ensures atomic writes; protects the following fields
-	prefix string     // prefix to write at beginning of each line
-	flag   int        // properties
-	out    io.Writer  // destination for output
-	buf    []byte     // for accumulating text to write
 }
 func (testLogger *TestLogger) Debug(msg string, args ...interface{}) {
 	testLogger.logs["debug"] = append(testLogger.logs["debug"], msg)
@@ -62,10 +53,6 @@ func (testLogger *TestLogger) ResetNamed(name string) hclog.Logger {
 }
 func (testLogger *TestLogger) SetLevel(level hclog.Level) {}
 func (testLogger *TestLogger) StandardLogger(opts *hclog.StandardLoggerOptions) *log.Logger {
-	if opts == nil {
-		opts = &hclog.StandardLoggerOptions{}
-	}
-
 	buffer := bytes.Buffer{}
 	return log.New(&buffer, "", 0)
 }
@@ -135,13 +122,13 @@ aws_account_id = my-account-id
 
 
 [aws-provider-admin]
-source_profile = my-account-id
+source_profile = Odania
 color = color2
 role_arn = arn:aws:iam::account-id-2:role/admin
 
 
 [aws-provider-developer]
-source_profile = my-account-id
+source_profile = Odania
 color = color2
 role_arn = arn:aws:iam::account-id-2:role/developer
 
