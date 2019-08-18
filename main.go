@@ -10,7 +10,7 @@ import (
 
 const (
 	ExtensionName = "terraless-extension-aws-extend-switch-roles"
-	VERSION       = "0.1.1"
+	VERSION       = "0.1.2"
 )
 
 type ExtensionAwsExtendSwitchRoles struct {
