@@ -4,23 +4,27 @@ env:
   global:
   - GO111MODULE=on
   - AWS_REGION=eu-central-1
+  - secure: k2WqjBNQIxOkFPCwl9+4w/jWv1riOrvy23XxX4L3uZRKNTdP8fED+DzY2EcsDaEJH6HYw//t10lRfQEZ9S70MMvSxEGat0f3b0c/I8gtnaUcnGYdZT+WyUJDPe6eULArgO+2V2mkZ6xlITItN4Kvp5LGJHMmc+4tVSuaIqh85MqlOvuoKTtRrQ62RvAp49uvgqVqqO+pr2cnZpHXyJJYoiCHpAY4Fb2SFR3YnxJikq6jiQQQTXJCsOF14l1xea5lOd+mnhMUeWuardxGM5B/afA02YzrquYp8Q0Lv4cE37nxlQAn/NqTZtTsy0t3XdgC/5Fu3NgcQz95t58+sNGqeGcMiGqjtS5MktF//bMJhvtwITVQpjwIDPId0weMTkaaXn+cPE3z/kxD4BSKW0X8+kqH4jn6522ocxlIx+ls+xj3KkOUbXtqYcM+YBvbW8KNjeGnRxLV3HqTRwDQF8inp4i+8M+RFBhm1/h16jpu5pCm3kZ4BNNlhm5jeRq764C8cpPjya7He5tl82B0cSV2R/wA9h6OYbaFWNtQUsd8v/+yvQTIx4ZKnsWXRkjOBupsT3JEYmf5afmxEX7E6scoiVpNMnQB/SLCupxiOlJAG4ZJDaylX3RIrVSknfy/5yPZYqww33aroun0r9S/DvwIVWpkyioRdvsnjkPZn/d5hC4=
+  - secure: nj5yRN6FAzBp8TgEP4SarFfV6iAbf1G+3H22raKIJlw/aFHKxJ03+DQJLbwkwmyXpW5AOSeey8530xMg1yBRxWXzCr1Jiu81mokSh2d6xwqbkJj952iu35g/u6VZRvdGMc/P8npWFczHnA2xs9dDZxva8J0ewp+fps/0EXR5WIT8m6J/h31Ol522VZEPMCd9TuyV2lsCqPSJRscdjpo6Fqr5YgHZFYMxPkjCtpV1KojeM1da2nhNdHylhJHUkakde7ZezYgdoVZy77V/sFamVxA8RRjJeeLfWENY4RA5/tXxHkU92TBoGpu1zrZHgDPVMBd7UaGXbB7eJg1mf/R0NSmWOTUy/IaFD0BHp7lLtOaJlV17t6w4bWSuYHNh6KhoYUx9Jav5uR6WdfpvBpIv3Y5IgvJiWVXfWq4fvp5mBsQbc2Yfk/p7QEE/Eel9aRDZvaYO8piqJUFc6x0zU7nCr+za3jnEPLwJSfVvw64XV05FYcuAOzhBY8pFBbvIDg4GNwUCEY9Ii5NxA1Wd35mmxKsWrBdaDzzJt/B3dHo+F09UW6SYfeF8TrxtZwKyJ04tM/CwLm1ttEyeYx2MlampLv4bB+NIHMFpPuq/uM3TFFjyMP3n74+rUeI8kDE+41V8A5K9ynfldPWRG7q0jIIWDNupiD8ZxHy9GRzoHk0z19w=
+  - secure: Q7H1z28iE0qI54v7tZH1rBRXgHq1W8JUBeNQTajg3qQmYfJThtx2KR6zpjc++CMP9d44hfvodeJXFx2/AzI7oU9mn/MVnQ6hyO86FfvGXVDLR1UWpqw0/krSNuOtjKGlCfDmtWsK9FAGZWffZVMUrA61d8QzizMfDEHqaU5oOKcjiePWH+bTScP/RRCmSvL06p7x1x2ihP06esGLioPvYQC6rGoeA0oaAaXEVxBiU8LolisLnFeC/j6hCaXX9qLqiduI7DNdygf7eclu++uTf9niaJJmma4VM2/sTLA0WKQ4nzVS3ngi4yFYCVP9thrLxejkV3lnwO/HYlKWGqeH6iAKAYebEZacaQWR2+gi1BkEwoPjgvi8KKHXD7mituzrAWxiivzOPj4ljVMwqPuoRBTMy0zFzGnExCP04T56GlHRINRTfrJN8qOWGsFIESXBwpTPQ1Mx7oOU+aSOdgAif/O5JOH5IE9hiZ+35SL3XKQSSqHHfowYJ5DESxB363voqnY7Bpi1sqs4FlYh0L//N3DJYKkFffjqbxf2enN/oTJRk5k9xVcDIft2YqRfkrVGgPuBewYriOS5S36yya3NYHE//zZxrAv89I8YooF/BX1AYPqFEor8JWPmaKfpRJCzOR8i6e11vhKOvlpWyiFNz3nqx2Nuc3Dtz2GO5LmpOg4=
 go:
-  - 1.11.x
+- 1.11.x
 install: true
 before_script:
-  - curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(go env GOPATH)/bin v1.16.0
-  - go get github.com/gobuffalo/packr/v2/packr2
-  - packr2
+- curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh |
+  sh -s -- -b $(go env GOPATH)/bin v1.16.0
+- go get github.com/gobuffalo/packr/v2/packr2
+- packr2
 script:
-  - golangci-lint run
-  - go test -v -race -coverprofile=coverage.txt -covermode=atomic ./...
+- golangci-lint run
+- go test -v -race -coverprofile=coverage.txt -covermode=atomic ./...
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
-  - bash -c 'git checkout go.mod go.sum'
+- bash <(curl -s https://codecov.io/bash)
+- bash -c 'git checkout go.mod go.sum'
 deploy:
-  - provider: script
-    skip_cleanup: true
-    script: curl -sL https://git.io/goreleaser | bash
-    on:
-      tags: true
-      condition: "$TRAVIS_OS_NAME = linux"
+- provider: script
+  skip_cleanup: true
+  script: curl -sL https://git.io/goreleaser | bash
+  on:
+    tags: true
+    condition: "$TRAVIS_OS_NAME = linux"
