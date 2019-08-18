@@ -80,7 +80,7 @@ func TestExtendSwitchRoles_Exec(t *testing.T) {
 			{
 				Name: "Odania",
 				Data: map[string]string{
-					"accountId": "my-account-id",
+					"baseAccountId": "my-account-id",
 				},
 				Providers: []schema.TerralessProvider{
 					{
