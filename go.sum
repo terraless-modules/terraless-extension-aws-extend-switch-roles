@@ -23,6 +23,8 @@ github.com/Odania-IT/terraless v0.1.45 h1:x9HtX5yGp8B2wL8BbYdrSYlNrWdMZ8LH1MDIrC
 github.com/Odania-IT/terraless v0.1.45/go.mod h1:OMvI8Tm4RCiW5YCsgrTTAZUAIGqSqfhByAi6SInmCQo=
 github.com/Odania-IT/terraless v0.1.48 h1:dN3uJtaGs9feI1FaMPiDSVzmWKge/Chwkd0sOMO/mo0=
 github.com/Odania-IT/terraless v0.1.48/go.mod h1:OMvI8Tm4RCiW5YCsgrTTAZUAIGqSqfhByAi6SInmCQo=
+github.com/Odania-IT/terraless v0.3.2 h1:ZrvcGRgpgEi35ynbpF67aL36O+NJwgAG0mq2lj2KZME=
+github.com/Odania-IT/terraless v0.3.2/go.mod h1:OMvI8Tm4RCiW5YCsgrTTAZUAIGqSqfhByAi6SInmCQo=
 github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc h1:cAKDfWh5VpdgMhJosfJnn5/FoN2SRZ4p7fJNX58YPaU=
 github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
 github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf h1:qet1QNfXsQxTZqLG4oE62mJzwPIB8+Tee4RNCL9ulrY=
