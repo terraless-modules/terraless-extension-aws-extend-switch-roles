@@ -19,8 +19,9 @@ const (
 	extendSwitchRolesTemplate = `
 [{{.Name}}-{{.Data.role}}]
 source_profile = {{.Data.sourceProfile}}
+aws_account_id = {{.Data.accountId}}
+role_name = {{.Data.role}}
 color = {{.Data.color}}
-role_arn = arn:aws:iam::{{.Data.accountId}}:role/{{.Data.role}}
 
 `
 )
